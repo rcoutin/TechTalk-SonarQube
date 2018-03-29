@@ -1,5 +1,4 @@
 # SonarQube 
-Repository for SonarQube Tech Talk
 
 Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of your source code. It performs static analysis on the code to detect bugs, code smells and security vulnerabilities, and provides descriptive review comments automatically. Its vast plugin support adds support for a variety of programming languages and integration to a majority of DevOps platforms.
 
@@ -20,7 +19,7 @@ Sonarqube consists of 4 components:
 4. One or more **SonarQube Scanners** running on your Build / Continuous Integration Servers to analyze projects
 
 Sonarqube requirements are briefly mentioned [here](./requirements.md).
-Sonarqube step-by-step installation guide is [here](./setup.md).
+Sonarqube step-by-step installation guide is available [here](./setup.md).
 
 ### Benefits
 * **Fast and Scalable:** You can easily scale the SonarCloud as the size of the project grows. No hassels for the user since it is entirely on the cloud and it automatically handles scalability.  
