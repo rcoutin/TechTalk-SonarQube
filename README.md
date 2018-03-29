@@ -1,5 +1,11 @@
-# SonarQube
+# SonarQube 
 Repository for SonarQube Tech Talk
+
+Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of your source code. It performs static analysis on the code to detect bugs, code smells and security vulnerabilities, and provides descriptive review comments automatically. Its vast plugin support adds support for a variety of programming languages and integration to a majority of DevOps platforms.
+
+Here are some of the features that Sonarqube offers - 
+
+QualityGate - This allows you to customize parameters that gauge the quality of code, as per your organizational thresholds. 
 
 ### Setup
 Sonarqube consists of 4 components:
