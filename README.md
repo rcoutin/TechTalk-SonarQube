@@ -1,6 +1,21 @@
 # SonarQube
 Repository for SonarQube Tech Talk
 
+### Setup
+Sonarqube consists of 4 components:
+1. One **SonarQube Server** starting 3 main processes:
+    * a Web Server for developers, managers to browse quality snapshots and configure the SonarQube instance
+    * a Search Server based on Elasticsearch to back searches from the UI
+    * a Compute Engine Server in charge of processing code analysis reports and saving them in the SonarQube Database
+2. One **SonarQube Database** to store:
+    * the configuration of the SonarQube instance (security, plugins settings, etc.)
+    * the quality snapshots of projects, views, etc.
+3. Multiple **SonarQube Plugins** installed on the server, possibly including language, SCM, integration, authentication, and governance plugins
+4. One or more **SonarQube Scanners** running on your Build / Continuous Integration Servers to analyze projects
+
+Sonarqube requirements are briefly mentioned [here](./requirements.md).
+Sonarqube step-by-step installation guide is [here](./setup.md).
+
 ### Benefits
 * **Fast and Scalable:** You can easily scale the SonarCloud as the size of the project grows. No hassels for the user since it is entirely on the cloud and it automatically handles scalability.  
 * **Thousands of rules:** Thanks to powerful static code analyzers, you can monitor an array of rules and can easily track down bugs and other quality issues easily.
