@@ -1,10 +1,14 @@
 # SonarQube 
 
-Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of your source code. It performs static analysis on the code to detect bugs, code smells and security vulnerabilities, and provides descriptive review comments automatically. Its vast plugin support adds support for a variety of programming languages and integration to a majority of DevOps platforms.
+Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of source code. It performs static analysis on code to detect bugs, code smells and security vulnerabilities, and provides descriptive review comments automatically. Its vast array of plugins adds support for a variety of programming languages and integration to a majority of DevOps platforms.
 
 Here are some of the features that Sonarqube offers - 
 
-QualityGate - This allows you to customize parameters that gauge the quality of code, as per your organizational thresholds. 
+**Centralized Dashboard** - An interface that provides a unified status of the projects code quality trends.  
+**QualityGate** - Customize parameters that gauge the quality of code, as per your organizational thresholds.  
+**External Integration** - Sonarqube integrates well with several popular Build Systems like Maven, Gradle and Ant, and Continuous Integration Engines like Jenkins, Travis CI, AppVeyor and more.
+**REST API** - 
+
 
 ### Setup
 Sonarqube consists of 4 components:
