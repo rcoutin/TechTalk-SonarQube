@@ -21,7 +21,7 @@ Here are some of the features that Sonarqube offers -
 * **SonarQube is not a build tool:** There are several tools out there like Maven, Ant, Gradle etc. that do a perfect job on that field. SonarQube expects that before you analyze a project it has been already compiled and built by your favorite build tool.
 * **SonarQube is not a code coverage tool:** It's integrated with the most popular test coverage tools like JaCoCo, Cobertura, PHPUnit etc. but it doesn’t compute code coverage itself. It reads pre-generated unit test report files and displays them in an extremely convenient dasboard.
 * **SonarQube is not a code formatter:** It’s not allowed to modify your code in any way. However you can get formatting suggestions by enabling the CheckStyle, CPPCheck, ScalaStyle rules you want to follow.
-* **SonarQube is not a continuous integration system to run your nightly builds:** You can integrate it with the most popular CI Engines to apply Continuous Integration but it’s not their replacement.
+* **SonarQube is not a continuous integration system to run your nightly builds:** You can integrate it with the most popular CI Engines to apply Continuous Inspection but it’s not their replacement.
 
 ### Setup
 Sonarqube consists of 4 components:
