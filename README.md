@@ -40,3 +40,51 @@ For integrating SonarQube Scanner for Jenkins, we use the SonarQube Scanner for 
 Once the job is complete, the plugin will detect that a SonarQube analysis was made during the build and display a badge and a widget on the job page with a link to the SonarQube dashboard as well as quality gate status. 
 
 [Here](https://github.ncsu.edu/rcoutin/SonarQube/blob/master/SonarQubeWithJenkins.md) you can find a step-by-step procedure to integrate SonarQube with Jenkins to run unit test cases and publish results to SonarQube.
+
+### 2. Analyzing with SonarQube Scanner for Maven
+This analyzer is recommended to launch analysis on Java Maven project.
+
+**Compatibility**: Maven 3.x
+
+**Prerequisites**:
+* Maven 3.x
+* SonarQube is already [installed](https://docs.sonarqube.org/display/SONAR/Installing+the+Server)
+* At least the minimal version of Java supported by your SonarQube server is in use (Java 8 for latest LTS)
+* The language plugins for each of the languages you wish to analyze are installed
+* You have read [Analyzing Code Source](https://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code). 
+
+**Initial Setup**
+Edit the settings.xml file, located in $MAVEN_HOME/conf or ~/.m2 or /etc/maven/, to set the plugin prefix and optionally the SonarQube server URL.
+
+Example: 
+```
+<settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://myserver:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
+</settings>
+```
+
+**Analyzing a Maven Project**
+Analyzing a Maven project consists of running a Maven goal: sonar:sonar in the directory where the pom.xml file sits.
+```
+mvn clean verify sonar:sonar
+  
+# In some situation you may want to run sonar:sonar goal as a dedicated step. Be sure to use install as first step for multi-module projects
+mvn clean install
+mvn sonar:sonar
+```
