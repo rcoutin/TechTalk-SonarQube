@@ -5,7 +5,7 @@ Sonarqube is a Continuous Inspection framework that provides insight on the Code
 Here are some of the features that Sonarqube offers - 
 
 **Centralized Dashboard** - An interface that provides a unified status of the projects code quality trends.  This interface can be installed locally as a **SonarQube Server** or on the cloud using **SonarCloud**. Both have their own benefits and limitations.  
-**QualityGate** - Customize parameters that gauge the quality of code, as per your organizational thresholds.        
+**QualityGate** - Customize parameters that gauge the quality of code, as per your organizational thresholds.  
 **External Integration** - Sonarqube integrates well with several popular Build Systems like Maven, Gradle and Ant, and Continuous Integration Engines like Jenkins, Travis CI, AppVeyor and more.    
 **REST API** - Sonarqube's web API can be used to automatically provision a SonarQube project and also monitor the scanning process.  
 
