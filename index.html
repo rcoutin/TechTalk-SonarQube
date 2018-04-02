@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Sonarqube : SonarQube - Tech Talk">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sonarqube</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.ncsu.edu/rcoutin/SonarQube">View on GitHub</a>
+
+          <h1 id="project_title">Sonarqube</h1>
+          <h2 id="project_tagline">SonarQube - Tech Talk</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="sonarqube" class="anchor" href="#sonarqube" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SonarQube</h1>
+<p>Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of source code. It performs static analysis on code to detect bugs, code smells, duplicated code and security vulnerabilities, and provides descriptive review comments automatically. Its vast array of plugins adds support for a variety of programming languages and integration to a majority of DevOps platforms.</p>
+<p>Here are some of the features that Sonarqube offers -</p>
+<p><strong>Centralized Dashboard</strong> - An interface that provides a unified status of the projects code quality trends.<br>
+<strong>QualityGate</strong> - Customize parameters that gauge the quality of code, as per your organizational thresholds.<br>
+<strong>External Integration</strong> - Sonarqube integrates well with several popular Build Systems like Maven, Gradle and Ant, and Continuous Integration Engines like Jenkins, Travis CI, AppVeyor and more.<br>
+<strong>REST API</strong> - Sonarqube's web API can be used to automatically provision a SonarQube project and also monitor the scanning process.</p>
+<h3>
+<a id="benefits" class="anchor" href="#benefits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Benefits</h3>
+<ul>
+<li>
+<strong>Fast and Scalable:</strong> SonarQube has been tested in environments. It performs daily analysis on more than five thousand projects with more than four million lines of code and twenty developers.</li>
+<li>
+<strong>Thousands of rules:</strong> Thanks to powerful static code analyzers, you can monitor an array of rules and can easily track down bugs and other quality issues.</li>
+<li>
+<strong>Deep code analysis:</strong> SonarQube, through SonarCloud can explore all your source files, whether in branches or pull requests, to reach a green quality gate and promote the build. This makes it really handy to use in huge teams where each team commits to a separate branch, so that the code can be properly analyzed before it can be merged into the master branch.</li>
+<li>
+<strong>Support for 16 languages:</strong> It supports a variety of languages like Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL etc, so it is pretty flexible and can be appied over an array of projects.</li>
+</ul>
+<h3>
+<a id="limitations" class="anchor" href="#limitations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Limitations</h3>
+<ul>
+<li>
+<strong>Cost:</strong> Its greatest con is its plugins cost in regards to certain languages, as well as the cost of licensing the enterprise model. Developers who produce millions of lines of code a year will be shelling out up to $62,000 per year to use the software, depending on output, and costs per year for huge, high availability database applications could reach $1 million per year</li>
+<li>
+<strong>SonarQube does not build projects:</strong> There are several tools out there like Maven, Ant, Gradle etc. that do a perfect job on that field. SonarQube expects that before you analyze a project it has been already compiled and built by your favorite build tool.</li>
+</ul>
+<h3>
+<a id="what-it-is-not" class="anchor" href="#what-it-is-not" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it is not!</h3>
+<ul>
+<li>
+<strong>SonarQube is not a code coverage tool:</strong> It is integrated with the most popular test coverage tools like JaCoCo, Cobertura, PHPUnit etc. but it does not compute code coverage itself. It reads pre-generated unit test report files and displays them in an extremely convenient dasboard.</li>
+<li>
+<strong>SonarQube is not a code formatter:</strong> It is not allowed to modify your code in any way. However, you can get formatting suggestions by enabling the CheckStyle, CPPCheck, ScalaStyle rules you want to follow.</li>
+<li>
+<strong>SonarQube is not a continuous integration system to run your nightly builds:</strong> You can integrate it with the most popular CI Engines to apply Continuous Inspection but it’s not their replacement.</li>
+</ul>
+<h3>
+<a id="components" class="anchor" href="#components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Components</h3>
+<p>SonarQube offers the following components that can be mixed and matched as per user requirements.</p>
+<ol>
+<li><strong>SonarQube Server</strong></li>
+</ol>
+<p>The SonarQube server acts as an in-depth, yet user-friendly, dashboard for viewing code quality characteristics of projects. Internally, it is a collection of backend servers that enable developers, managers to visualize quality snapshots and configure the SonarQube instance. It consists of a Search Server based on ElasticSearch to back searches from the UI, and a Compute Engine Server in charge of processing code analysis reports and saving them in the SonarQube Database. The database also stores the configuration of the SonarQube instance (security, plugins settings, etc.) and the quality snapshots of projects, views, etc.</p>
+<p>Additionally, the server may also contain multiple <strong>SonarQube Plugins</strong>, including language, SCM, integration, authentication, and governance plugins. The REST API is also exposed by the server.</p>
+<p>These components are readily available to the user as a package from the <a href="https://www.sonarqube.org/downloads/">download page</a></p>
+<ol start="2">
+<li><strong>SonarCloud</strong></li>
+</ol>
+<p>SonarCloud is a cloud-based alternative to the SonarQube server. It has all the features that the SonarQube server has to offer in addition to the minimal overhead of maintenance. SonarCloud is free for use with public repositories.</p>
+<ol start="3">
+<li><strong>SonarQube Scanner</strong></li>
+</ol>
+<p>The SonarQube Scanner is the underlying computation engine that performs the static analysis of code. The above servers rely on data from the scanner. This scanner could be downloaded as a stand-alone application or used as a plugin on your Build / Continuous Integration Servers.</p>
+<p>Sonarqube requirements are briefly mentioned <a href="./requirements.md">here</a>.
+Sonarqube step-by-step installation guide is available <a href="./setup.md">here</a>.</p>
+<h2>
+<a id="integrating-sonarqube-with-various-ci-engines" class="anchor" href="#integrating-sonarqube-with-various-ci-engines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integrating SonarQube with various CI Engines</h2>
+<h3>
+<a id="1-analyzing-with-sonarqube-scanner-for-jenkins" class="anchor" href="#1-analyzing-with-sonarqube-scanner-for-jenkins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Analyzing with SonarQube Scanner for Jenkins</h3>
+<p>For integrating SonarQube Scanner for Jenkins, we use the SonarQube Scanner for Jenkins 2.6.1. This plugin lets you centralize the configuration of SonarQube server connection details in Jenkins global configuration. Then you can trigger SonarQube analysis from Jenkins using standard Jenkins Build Steps to trigger analysis with:</p>
+<ul>
+<li>SonarQube Scanner</li>
+<li>SonarQube Scanner for Maven</li>
+<li>SonarQube Scanner for MSBuild</li>
+</ul>
+<p>Once the job is complete, the plugin will detect that a SonarQube analysis was made during the build and display a badge and a widget on the job page with a link to the SonarQube dashboard as well as quality gate status.</p>
+<p><a href="https://github.ncsu.edu/rcoutin/SonarQube/blob/master/SonarQubeWithJenkins.md">Here</a> you can find a step-by-step procedure to integrate SonarQube with Jenkins to run unit test cases and publish results to SonarQube.</p>
+<h3>
+<a id="2-analyzing-with-sonarqube-scanner-for-maven" class="anchor" href="#2-analyzing-with-sonarqube-scanner-for-maven" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Analyzing with SonarQube Scanner for Maven</h3>
+<p>This analyzer is recommended to launch analysis on Java Maven project.</p>
+<p><strong>Compatibility</strong>: Maven 3.x</p>
+<p><strong>Prerequisites</strong>:</p>
+<ul>
+<li>Maven 3.x</li>
+<li>SonarQube is already <a href="https://docs.sonarqube.org/display/SONAR/Installing+the+Server">installed</a>
+</li>
+<li>At least the minimal version of Java supported by your SonarQube server is in use (Java 8 for latest LTS)</li>
+<li>The language plugins for each of the languages you wish to analyze are installed</li>
+<li>You have read <a href="https://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code">Analyzing Code Source</a>.</li>
+</ul>
+<p><strong>Initial Setup</strong>
+Edit the settings.xml file, located in $MAVEN_HOME/conf or ~/.m2 or /etc/maven/, to set the plugin prefix and optionally the SonarQube server URL.</p>
+<p>Example:</p>
+<pre><code>&lt;settings&gt;
+    &lt;pluginGroups&gt;
+        &lt;pluginGroup&gt;org.sonarsource.scanner.maven&lt;/pluginGroup&gt;
+    &lt;/pluginGroups&gt;
+    &lt;profiles&gt;
+        &lt;profile&gt;
+            &lt;id&gt;sonar&lt;/id&gt;
+            &lt;activation&gt;
+                &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+            &lt;/activation&gt;
+            &lt;properties&gt;
+                &lt;!-- Optional URL to server. Default value is http://localhost:9000 --&gt;
+                &lt;sonar.host.url&gt;
+                  http://myserver:9000
+                &lt;/sonar.host.url&gt;
+            &lt;/properties&gt;
+        &lt;/profile&gt;
+     &lt;/profiles&gt;
+&lt;/settings&gt;
+</code></pre>
+<p><strong>Analyzing a Maven Project</strong>
+Analyzing a Maven project consists of running a Maven goal: sonar:sonar in the directory where the pom.xml file sits.</p>
+<pre><code>mvn clean verify sonar:sonar
+  
+# In some situation you may want to run sonar:sonar goal as a dedicated step. Be sure to use install as first step for multi-module projects
+mvn clean install
+mvn sonar:sonar
+</code></pre>
+<h3>
+<a id="3-continuous-inspection-with-travisci" class="anchor" href="#3-continuous-inspection-with-travisci" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Continuous Inspection with TravisCI</h3>
+<p>TravisCI offers a SonarCloud plugin that allows for static code analysis on every commit, thus enabling Continuous Inspection. This integration also enables automatic review comments in pull requests.</p>
+<p>A brief summary of steps have been outlined below with links to detailed documentation</p>
+<ul>
+<li>
+<strong>Setup SonarCloud</strong>
+<ul>
+<li>Register to SonarCloud at <a href="http://www.sonarcloud.io">www.sonarcloud.io</a>
+</li>
+<li>Create an Organization, note its name and key</li>
+<li>Create a <a href="https://sonarcloud.io/account/security">User authentication token</a> on SonarCloud and keep it handy</li>
+</ul>
+</li>
+<li>
+<a href="https://docs.travis-ci.com/user/sonarcloud/"><strong>Enable Travis Integration</strong></a>
+<ul>
+<li>Create a .travis.yml file : This tells Travis that the SonarCloud addon has to be used and what parameters it needs.</li>
+<li>Create a sonar-project.properties file to configure the scanner properties like project-key and project-name</li>
+</ul>
+</li>
+<li>
+<a href="https://docs.travis-ci.com/user/sonarcloud/#Analysis-of-internal-pull-requests"><strong>Enable Pull Request reviews</strong></a>
+<ul>
+<li>Create a new GitHub account for the bot that SonarCloud will use to comment on Pull Requests and add it as a collaborator on your project.</li>
+<li>Obtain a <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Personal Access Token</a> from the Developer Settings and set access permissions.</li>
+<li>Login to SonarCloud; Configure the Pull Request settings</li>
+</ul>
+</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>The current version can only scan Internal pull requests. External Pull Requests will be added in future versions.</li>
+<li>Since the TravisCI SonarCloud addon communicates directly to the host 'www.sonarcloud.io' it is challenging to add a custom SonarQube server to scan Private repository. This means private repositories have to be scanned at a cost, on SonarCloud instead your own SonarQube instance.</li>
+</ul>
+<h2>
+<a id="insights" class="anchor" href="#insights" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Insights</h2>
+<p>We first came across SonarQube while developing our Software Engineering project. We had decided to develop a chat bot that performs static code analysis and gives the user suggestions and ways to make his/her code better. We researched many static code analysis tool and found SonarQube to be the easiest to implement with its open-source nature, extensive plugins and integrations with other software, integrated Web APIs, a good UI for the server and detailed installation and troubleshooting documents and forums available.</p>
+<p>SonarQube's RESTful API makes it easier for apps to communicate with the SonarQube server to receive analysis reports and rules information pertaining to the issues in the code. A screenshot and URL of our project can be found below.</p>
+<p>More personal opinions ?</p>
+<p>Screenshot ?</p>
+<p>CSC510 Project Link: ?</p>
+<p>Does it work? Delete if it does</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sonarqube maintained by <a href="https://github.ncsu.edu/rcoutin">rcoutin</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
