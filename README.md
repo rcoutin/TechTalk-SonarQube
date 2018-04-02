@@ -35,7 +35,7 @@ The SonarQube server acts as an in-depth, yet user-friendly, dashboard for viewi
    
 Additionally, the server may also contain multiple **SonarQube Plugins**, including language, SCM, integration, authentication, and governance plugins. The REST API is also exposed by the server. 
  
-These components are readily available to the user as a package from the download page.
+These components are readily available to the user as a package from the [download page](https://www.sonarqube.org/downloads/)
 
 2) **SonarCloud** 
 
@@ -126,4 +126,4 @@ A brief summary of steps have been outlined below with links to detailed documen
 
 **Limitations**  
 * The current version can only scan Internal pull requests. External Pull Requests will be added in future versions. 
-* Since the TravisCI SonarCloud addon communicates directly to the host 'www.sonarcloud.io' it is challenging to add a custom SonarQube server to scan Private repository. This means private repositories have to be scanned at a cost, on SonarCloud instead of your own SonarQube instance.
+* Since the TravisCI SonarCloud addon communicates directly to the host 'www.sonarcloud.io' it is challenging to add a custom SonarQube server. This means private repositories have to be scanned at a cost, on SonarCloud instead of your own SonarQube instance.
