@@ -120,7 +120,7 @@ A brief summary of steps have been outlined below with links to detailed documen
    * Create a .travis.yml file : This tells Travis that the SonarCloud addon has to be used and what parameters it needs.  
    * Create a sonar-project.properties file to configure the scanner properties like project-key and project-name
 * [**Enable Pull Request reviews**](https://docs.travis-ci.com/user/sonarcloud/#Analysis-of-internal-pull-requests)  
-   * Create a new GitHub account for the bot that SonarCloud will use to comment on Pull Requests.  
+   * Create a new GitHub account for the bot that SonarCloud will use to comment on Pull Requests and add it as a collaborator on your project. 
    * Obtain a [Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) from the Developer Settings and set access permissions.   
    * Login to SonarCloud; Configure the Pull Request settings
 
