@@ -4,43 +4,49 @@ Sonarqube is a Continuous Inspection framework that provides insight on the Code
 
 Here are some of the features that Sonarqube offers - 
 
-**Centralized Dashboard** - An interface that provides a unified status of the projects code quality trends.  This interface can be installed locally as a **SonarQube Server** or on the cloud using **SonarCloud**. Both have their own benefits and limitations.  
+**Centralized Dashboard** - An interface that provides a unified status of the projects code quality trends.    
 **QualityGate** - Customize parameters that gauge the quality of code, as per your organizational thresholds.  
 **External Integration** - Sonarqube integrates well with several popular Build Systems like Maven, Gradle and Ant, and Continuous Integration Engines like Jenkins, Travis CI, AppVeyor and more.    
 **REST API** - Sonarqube's web API can be used to automatically provision a SonarQube project and also monitor the scanning process.  
 
 ### Benefits
 * **Fast and Scalable:** You can easily scale the SonarCloud as the size of the project grows. No hassels for the user since it is entirely on the cloud and it automatically handles scalability.  
-* **Thousands of rules:** Thanks to powerful static code analyzers, you can monitor an array of rules and can easily track down bugs and other quality issues easily.
+* **Thousands of rules:** Thanks to powerful static code analyzers, you can monitor an array of rules and can easily track down bugs and other quality issues.
 * **Deep code analysis:** SonarCloud can explore all your source files, whether in branches or pull requests, to reach a green quality gate and promote the build. This makes it really handy to use in huge teams where each team commits to a separate branch, so that the code can be properly analyzed before it can be merged into the master branch.
 * **Support for 16 languages:** It supports a variety of languages like Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL etc, so it is pretty flexible and can be appied over an array of projects.  
 
 ### Limitations
 * **Cost:** Its greatest con is its plugins cost in regards to certain languages, as well as the cost of licensing the enterprise model. Developers who produce millions of lines of code a year will be shelling out up to $62,000 per year to use the software, depending on output, and costs per year for huge, high availability database applications could reach $1 million per year
 * **SonarQube is not a build tool:** There are several tools out there like Maven, Ant, Gradle etc. that do a perfect job on that field. SonarQube expects that before you analyze a project it has been already compiled and built by your favorite build tool.
-* **SonarQube is not a code coverage tool:** It's integrated with the most popular test coverage tools like JaCoCo, Cobertura, PHPUnit etc. but it doesn’t compute code coverage itself. It reads pre-generated unit test report files and displays them in an extremely convenient dasboard.
-* **SonarQube is not a code formatter:** It’s not allowed to modify your code in any way. However you can get formatting suggestions by enabling the CheckStyle, CPPCheck, ScalaStyle rules you want to follow.
+
+### What it is not!
+
+* **SonarQube is not a code coverage tool:** It is integrated with the most popular test coverage tools like JaCoCo, Cobertura, PHPUnit etc. but it does not compute code coverage itself. It reads pre-generated unit test report files and displays them in an extremely convenient dasboard.
+* **SonarQube is not a code formatter:** It is not allowed to modify your code in any way. However, you can get formatting suggestions by enabling the CheckStyle, CPPCheck, ScalaStyle rules you want to follow.
 * **SonarQube is not a continuous integration system to run your nightly builds:** You can integrate it with the most popular CI Engines to apply Continuous Inspection but it’s not their replacement.
 
-### Setup
+### Components
 
-Upon 
+SonarQube offers the following components that can be mixed and matched as per user requirements.
 
-Sonarqube consists of 4 components:
-1. One **SonarQube Server** starting 3 main processes:
-    * a Web Server for developers, managers to browse quality snapshots and configure the SonarQube instance
-    * a Search Server based on Elasticsearch to back searches from the UI
-    * a Compute Engine Server in charge of processing code analysis reports and saving them in the SonarQube Database.    
+1) **SonarQube Server** 
 
-2. One **SonarQube Database** to store:
-    * the configuration of the SonarQube instance (security, plugins settings, etc.)
-    * the quality snapshots of projects, views, etc.
-3. Multiple **SonarQube Plugins** installed on the server, possibly including language, SCM, integration, authentication, and governance plugins
-4. One or more **SonarQube Scanners** running on your Build / Continuous Integration Servers to analyze projects
+The SonarQube server acts as an in-depth, yet user-friendly, dashboard for viewing code quality characteristics of projects. Internally, it is a collection of backend servers that enable developers, managers to visualize quality snapshots and configure the SonarQube instance. It consists of a Search Server based on ElasticSearch to back searches from the UI, and a Compute Engine Server in charge of processing code analysis reports and saving them in the SonarQube Database. The database also stores the configuration of the SonarQube instance (security, plugins settings, etc.) and the quality snapshots of projects, views, etc.
+   
+Additionally, the server may also contain multiple **SonarQube Plugins**, including language, SCM, integration, authentication, and governance plugins. The REST API is also exposed by the server. 
+ 
+These components are readily available to the user as a package from the download page.
+
+2) **SonarCloud** 
+
+SonarCloud is a cloud-based alternative to the SonarQube server. It has all the features that the SonarQube server has to offer in addition to the minimal overhead of maintenance. SonarCloud is free for use with public repositories. 
+
+3) **SonarQube Scanner** 
+
+The SonarQube Scanner is the underlying computation engine that performs the static analysis of code. The above servers rely on data from the scanner. This scanner could be downloaded as a stand-alone application or used as a plugin on your Build / Continuous Integration Servers.
 
 Sonarqube requirements are briefly mentioned [here](./requirements.md).
 Sonarqube step-by-step installation guide is available [here](./setup.md).
-
 
 ## Integrating SonarQube with various CI Engines
 ### 1. Analyzing with SonarQube Scanner for Jenkins
@@ -120,4 +126,4 @@ A brief summary of steps have been outlined below with links to detailed documen
 
 **Limitations**  
 * The current version can only scan Internal pull requests. External Pull Requests will be added in future versions. 
-* Since the TravisCI SonarCloud addon communicates directly to the host 'www.sonarcloud.io' it is challenging to add a custom SonarQube server to scan Private repository. This means private repositories have to be scanned at a cost, on SonarCloud instead your own SonarQube instance.
+* Since the TravisCI SonarCloud addon communicates directly to the host 'www.sonarcloud.io' it is challenging to add a custom SonarQube server to scan Private repository. This means private repositories have to be scanned at a cost, on SonarCloud instead of your own SonarQube instance.
