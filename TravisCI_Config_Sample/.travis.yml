@@ -1,0 +1,12 @@
+language: node_js
+
+addons:
+    sonarcloud:
+        organization: "abcdabcd"
+        token: 
+            secure: $SONAR_TOKEN
+        branch: "master"
+
+script:
+    - sonar-scanner -X
+    
