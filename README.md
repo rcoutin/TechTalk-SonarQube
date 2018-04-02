@@ -121,3 +121,15 @@ A brief summary of steps have been outlined below with links to detailed documen
 **Limitations**  
 * The current version can only scan Internal pull requests. External Pull Requests will be added in future versions. 
 * Since the TravisCI SonarCloud addon communicates directly to the host 'www.sonarcloud.io' it is challenging to add a custom SonarQube server to scan Private repository. This means private repositories have to be scanned at a cost, on SonarCloud instead your own SonarQube instance.
+
+## Insights
+
+We first came across SonarQube while developing our Software Engineering project. We had decided to develop a chat bot that performs static code analysis and gives the user suggestions and ways to make his/her code better. We researched many static code analysis tool and found SonarQube to be the easiest to implement with its open-source nature, extensive plugins and integrations with other software, integrated Web APIs, a good UI for the server and detailed installation and troubleshooting documents and forums available.
+
+SonarQube's RESTful API makes it easier for apps to communicate with the SonarQube server to receive analysis reports and rules information pertaining to the issues in the code. A screenshot and URL of our project can be found below.
+
+More personal opinions ?
+
+Screenshot ?
+
+CSC510 Project Link: ?
