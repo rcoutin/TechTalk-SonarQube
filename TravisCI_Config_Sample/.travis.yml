@@ -2,7 +2,7 @@ language: node_js
 
 addons:
     sonarcloud:
-        organization: "abcdabcd"
+        organization: "org_key"
         token: 
             secure: $SONAR_TOKEN
         branch: "master"
