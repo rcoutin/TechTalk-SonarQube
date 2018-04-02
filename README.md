@@ -121,6 +121,8 @@ A brief summary of steps have been outlined below with links to detailed documen
    * Create a new GitHub account for the bot that SonarCloud will use to comment on Pull Requests and add it as a collaborator on your project. 
    * Obtain a [Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) from the Developer Settings and set access permissions.   
    * Login to SonarCloud; Configure the Pull Request settings
+   
+ Sample configuration files are available [here](TravisCI_Config_Sample)
 
 **Limitations**  
 * The current version can only scan Internal pull requests. External Pull Requests will be added in future versions. 
