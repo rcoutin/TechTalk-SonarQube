@@ -46,7 +46,7 @@ The SonarQube Scanner is the underlying computation engine that performs the sta
 Sonarqube requirements are briefly mentioned [here](./requirements.md).
 Sonarqube step-by-step installation guide is available [here](./setup.md).
 
-## Integrating SonarQube with various CI Engines
+## Integrating SonarQube with various CI Engines (Demonstration [SonarQube TechTalk-Youtube](https://youtu.be/sEiDxwaKxHY)
 ### 1. Analyzing with SonarQube Scanner for Jenkins
 For integrating SonarQube Scanner for Jenkins, we use the SonarQube Scanner for Jenkins 2.6.1. This plugin lets you centralize the configuration of SonarQube server connection details in Jenkins global configuration. Then you can trigger SonarQube analysis from Jenkins using standard Jenkins Build Steps to trigger analysis with:
 * SonarQube Scanner
