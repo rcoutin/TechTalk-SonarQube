@@ -31,19 +31,21 @@
 <a id="sonarqube" class="anchor" href="#sonarqube" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SonarQube</h1>
 <p>Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of source code. It performs static analysis on code to detect bugs, code smells, duplicated code and security vulnerabilities, and provides descriptive review comments automatically. Its vast array of plugins adds support for a variety of programming languages and integration to a majority of DevOps platforms.</p>
 <p>Here are some of the features that Sonarqube offers -</p>
-<p><strong>Centralized Dashboard</strong> - An interface that provides a unified status of the projects code quality trends.<br>
-<strong>QualityGate</strong> - Customize parameters that gauge the quality of code, as per your organizational thresholds.<br>
-<strong>External Integration</strong> - Sonarqube integrates well with several popular Build Systems like Maven, Gradle and Ant, and Continuous Integration Engines like Jenkins, Travis CI, AppVeyor and more.<br>
-<strong>REST API</strong> - Sonarqube's web API can be used to automatically provision a SonarQube project and also monitor the scanning process.</p>
-<h3>
-<a id="benefits" class="anchor" href="#benefits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Benefits</h3>
 <ul>
 <li>
-<strong>Fast and Scalable:</strong> SonarQube has been tested in environments. It performs daily analysis on more than five thousand projects with more than four million lines of code and twenty developers.</li>
+<strong>Deep code analysis:</strong> SonarQube, through SonarCloud, can explore all your source files, whether in branches or pull requests, to reach a green quality gate and promote the build. This makes it really handy to use in huge teams where each team commits to a separate branch, so that the code can be properly analyzed before it can be merged into the master branch.</li>
 <li>
-<strong>Thousands of rules:</strong> Thanks to powerful static code analyzers, you can monitor an array of rules and can easily track down bugs and other quality issues.</li>
+<strong>Centralized Dashboard</strong> - An interface that provides a unified status of the projects code quality trends. It provides historical information that helps visualize the code quality characteristics over time. It also quantifies the amount of time required to resolve an issue i.e. 'CodeDebt'.</li>
 <li>
-<strong>Deep code analysis:</strong> SonarQube, through SonarCloud can explore all your source files, whether in branches or pull requests, to reach a green quality gate and promote the build. This makes it really handy to use in huge teams where each team commits to a separate branch, so that the code can be properly analyzed before it can be merged into the master branch.</li>
+<strong>QualityGate</strong> - Customize parameters that gauge the quality of code, as per your organizational thresholds.</li>
+<li>
+<strong>Vast Collection of Rules</strong> - Thanks to powerful static code analyzers, you can monitor an array of rules and can easily track down bugs and other quality issues.</li>
+<li>
+<strong>External Integration</strong> - Sonarqube integrates well with several popular Build Systems like Maven, Gradle and Ant, and Continuous Integration Engines like Jenkins, Travis CI, AppVeyor and more.</li>
+<li>
+<strong>REST API</strong> - Sonarqube's REST API can be used to automatically provision a SonarQube project and also monitor the analysis process.</li>
+<li>
+<strong>Fast and Scalable:</strong> SonarQube has been tested in various environments. It performs daily analysis on more than five thousand projects with more than four million lines of code and twenty developers.</li>
 <li>
 <strong>Support for 16 languages:</strong> It supports a variety of languages like Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL etc, so it is pretty flexible and can be appied over an array of projects.</li>
 </ul>
@@ -68,24 +70,18 @@
 <h3>
 <a id="components" class="anchor" href="#components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Components</h3>
 <p>SonarQube offers the following components that can be mixed and matched as per user requirements.</p>
-<ol>
-<li><strong>SonarQube Server</strong></li>
-</ol>
+<p><strong>SonarQube Server</strong></p>
 <p>The SonarQube server acts as an in-depth, yet user-friendly, dashboard for viewing code quality characteristics of projects. Internally, it is a collection of backend servers that enable developers, managers to visualize quality snapshots and configure the SonarQube instance. It consists of a Search Server based on ElasticSearch to back searches from the UI, and a Compute Engine Server in charge of processing code analysis reports and saving them in the SonarQube Database. The database also stores the configuration of the SonarQube instance (security, plugins settings, etc.) and the quality snapshots of projects, views, etc.</p>
 <p>Additionally, the server may also contain multiple <strong>SonarQube Plugins</strong>, including language, SCM, integration, authentication, and governance plugins. The REST API is also exposed by the server.</p>
 <p>These components are readily available to the user as a package from the <a href="https://www.sonarqube.org/downloads/">download page</a></p>
-<ol start="2">
-<li><strong>SonarCloud</strong></li>
-</ol>
+<p><strong>SonarCloud</strong></p>
 <p>SonarCloud is a cloud-based alternative to the SonarQube server. It has all the features that the SonarQube server has to offer in addition to the minimal overhead of maintenance. SonarCloud is free for use with public repositories.</p>
-<ol start="3">
-<li><strong>SonarQube Scanner</strong></li>
-</ol>
+<p><strong>SonarQube Scanner</strong></p>
 <p>The SonarQube Scanner is the underlying computation engine that performs the static analysis of code. The above servers rely on data from the scanner. This scanner could be downloaded as a stand-alone application or used as a plugin on your Build / Continuous Integration Servers.</p>
 <p>Sonarqube requirements are briefly mentioned <a href="./requirements.md">here</a>.
 Sonarqube step-by-step installation guide is available <a href="./setup.md">here</a>.</p>
 <h2>
-<a id="integrating-sonarqube-with-various-ci-engines" class="anchor" href="#integrating-sonarqube-with-various-ci-engines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integrating SonarQube with various CI Engines</h2>
+<a id="integrating-sonarqube-with-various-ci-engines-demonstration-sonarqube-techtalk-youtube" class="anchor" href="#integrating-sonarqube-with-various-ci-engines-demonstration-sonarqube-techtalk-youtube" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integrating SonarQube with various CI Engines (Demonstration <a href="https://youtu.be/_HaeXszIZOE">SonarQube TechTalk-Youtube</a>)</h2>
 <h3>
 <a id="1-analyzing-with-sonarqube-scanner-for-jenkins" class="anchor" href="#1-analyzing-with-sonarqube-scanner-for-jenkins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Analyzing with SonarQube Scanner for Jenkins</h3>
 <p>For integrating SonarQube Scanner for Jenkins, we use the SonarQube Scanner for Jenkins 2.6.1. This plugin lets you centralize the configuration of SonarQube server connection details in Jenkins global configuration. Then you can trigger SonarQube analysis from Jenkins using standard Jenkins Build Steps to trigger analysis with:</p>
@@ -170,6 +166,7 @@ mvn sonar:sonar
 </ul>
 </li>
 </ul>
+<p>Sample configuration files are available <a href="TravisCI_Config_Sample">here</a></p>
 <p><strong>Limitations</strong></p>
 <ul>
 <li>The current version can only scan Internal pull requests. External Pull Requests will be added in future versions.</li>
@@ -177,12 +174,30 @@ mvn sonar:sonar
 </ul>
 <h2>
 <a id="insights" class="anchor" href="#insights" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Insights</h2>
-<p>We first came across SonarQube while developing our Software Engineering project. We had decided to develop a chat bot that performs static code analysis and gives the user suggestions and ways to make his/her code better. We researched many static code analysis tool and found SonarQube to be the easiest to implement with its open-source nature, extensive plugins and integrations with other software, integrated Web APIs, a good UI for the server and detailed installation and troubleshooting documents and forums available.</p>
-<p>SonarQube's RESTful API makes it easier for apps to communicate with the SonarQube server to receive analysis reports and rules information pertaining to the issues in the code. A screenshot and URL of our project can be found below.</p>
-<p>More personal opinions ?</p>
-<p>Screenshot ?</p>
-<p>CSC510 Project Link: ?</p>
-<p>Does it work? Delete if it does</p>
+<p>We first came across SonarQube while developing our Software Engineering project. We had decided to develop a chat bot that performs static code analysis and gives the user suggestions and ways to make his/her code better. We researched many static code analysis tools and found SonarQube to be the easiest to implement with its open-source nature, extensive plugins and integrations with other software, integrated Web APIs, a good UI for the server and detailed installation and troubleshooting documents and forums available.</p>
+<p>SonarQube's RESTful API makes it easier for apps to communicate with the SonarQube server to receive analysis reports and rules information pertaining to the issues in the code.</p>
+<p>A poster and URL of our project can be found below.</p>
+<p><img src="https://github.ncsu.edu/rcoutin/SonarQube/blob/master/content/poster_v4.jpg?raw=true" alt="poster">
+Project Page: <a href="https://pages.github.ncsu.edu/rcoutin/BOT/">TutorBot</a></p>
+<h2>
+<a id="why-static-code-analysis-at-all" class="anchor" href="#why-static-code-analysis-at-all" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why Static Code Analysis at all<a href="http://javarevisited.blogspot.com/2014/02/why-static-code-analysis-is-important.html">?</a>
+</h2>
+<p>Static code analysis is about analysing your source code without executing them to find potential vulnerabilities, bugs and security threats. Software code quality and security has went from being a “nice to have” to a necessity, and many organizations are making it mandatory to pass static code analysis test, penetration testing and security testing before you deploy your code in production. Static analysis tools are getting popular every passing day and more and more companies are making static code analysis scan mandatory for all new development.</p>
+<p>Static code analyser looks for patterns, defined to them as rules, which can cause those security vulnerability or other code quality problems, necessary for production quality code. But like every other technology, static analysis has it’s set of advantages and disadvantages, which is also best way to judge any technology.</p>
+<p>As a senior Java developer or Team lead, you have responsibility to set-up process like automated code analysis, continuous integration, automation testing to keep your project in healthy state and promote best development practices in your team.</p>
+<p>In our opinion, unit testing, code review and static code analysis makes a nice combo, along with continuous integration. But as every tool has some pros and cons, here are some cons of using static code analysis tools:</p>
+<ul>
+<li>
+<strong>Time Consuming</strong>:
+Another problem with static code analysers is that they take too long to run and after some time developers never bother to run them. You can minimize this problem by making static code analysis part of your build process, and not an optional, good to do alternative. Second thing, you must review and write custom rules, so that it won't take too long to execute. Given build process need to do too many things these days e.g. clean, compile, package, static analysis, unit testing and deployment, even small time added in each step, eventually increases total build time.</li>
+<li>
+<strong>False Positives</strong>:
+When your tools alert you with false positives, you start taking them lightly and then it becomes habit to treat everything as a false positive, which eventually takes away all benefits of static code analysis. A good software developer needs to be disciplined enough to not fall into that trap.</li>
+</ul>
+<h2>
+<a id="other-static-analysis-tools" class="anchor" href="#other-static-analysis-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other Static Analysis Tools</h2>
+<p>We looked at other Static Analysis tools; some of them, like Checkmarx and Veracode were too security-focused and had limited options in terms of language support and DevOps integration. Standalone code analyzers like PMD, CheckStyle and FixBugs did not feature an extensive analysis insights and DevOps support. Coverity came close to SonarQube with respect to language support and DevOps integration but it was soon evident that SonarQube had superior user experience, post-analysis reports and documentation. Codacy also offered a similar feature set, and seemed like a scaled-down version of SonarQube; it did not feature a standalone scanner component. CodeClimate, which is more popular than SonarQube, has a smaller learning curve and simpler integration with external services, but it's quality gate and rule-set were less granular than SonarQube. CodeFactor also had similar limitations, but it had an interesting feature - code performance review.</p>
+<p>In conclusion, SonarQube is vastly flexible as compared to its rivals; its cloud interface, SonarCloud makes it easier to get things up and running, whereas the standalone Scanner and Server components meets more complex requirements. Moreover, SonarQube's rich analysis insights and granular configuration should appeal to advanced users.</p>
       </section>
     </div>
 
