@@ -1,5 +1,12 @@
 # SonarQube 
 
+**Presented By**
+
+Rahul Coutinho (rcoutin)  
+Rohil Shah (rshah8)  
+Siddhant Shah (sshah14)  
+Vijay Hebbar (vhhebbar)  
+
 Sonarqube is a Continuous Inspection framework that provides insight on the Code Quality characteristics of source code. It performs static analysis on code to detect bugs, code smells, duplicated code and security vulnerabilities, and provides descriptive review comments automatically. Its vast array of plugins adds support for a variety of programming languages and integration to a majority of DevOps platforms.
 
 Here are some of the features that Sonarqube offers - 
