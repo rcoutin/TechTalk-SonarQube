@@ -132,16 +132,32 @@ A brief summary of steps have been outlined below with links to detailed documen
 
 We first came across SonarQube while developing our Software Engineering project. We had decided to develop a chat bot that performs static code analysis and gives the user suggestions and ways to make his/her code better. We researched many static code analysis tools and found SonarQube to be the easiest to implement with its open-source nature, extensive plugins and integrations with other software, integrated Web APIs, a good UI for the server and detailed installation and troubleshooting documents and forums available.
 
-SonarQube's RESTful API makes it easier for apps to communicate with the SonarQube server to receive analysis reports and rules information pertaining to the issues in the code. A screenshot and URL of our project can be found below.
+SonarQube's RESTful API makes it easier for apps to communicate with the SonarQube server to receive analysis reports and rules information pertaining to the issues in the code.
 
-More personal opinions ?
+A poster and URL of our project can be found below.
 
-Screenshot ?
+![poster](./content/poster_v4.jpg)
+Project Page: [TutorBot](https://pages.github.ncsu.edu/rcoutin/BOT/)
+
+## Why Static Code Analysis at all[?](http://javarevisited.blogspot.com/2014/02/why-static-code-analysis-is-important.html)
+
+Static code analysis is about analysing your source code without executing them to find potential vulnerabilities, bugs and security threats. Software code quality and security has went from being a “nice to have” to a necessity, and many organizations are making it mandatory to pass static code analysis test, penetration testing and security testing before you deploy your code in production. Static analysis tools are getting popular every passing day and more and more companies are making static code analysis scan mandatory for all new development.
+
+Static code analyser looks for patterns, defined to them as rules, which can cause those security vulnerability or other code quality problems, necessary for production quality code. But like every other technology, static analysis has it’s set of advantages and disadvantages, which is also best way to judge any technology.
+
+As a senior Java developer or Team lead, you have responsibility to set-up process like automated code analysis, continuous integration, automation testing to keep your project in healthy state and promote best development practices in your team.
+
+In our opinion, unit testing, code review and static code analysis makes a nice combo, along with continuous integration. But as every tool has some pros and cons, here are some cons of using static code analysis tools:
+
+* **Time Consuming**:
+Another problem with static code analysers is that they take too long to run and after some time developers never bother to run them. You can minimize this problem by making static code analysis part of your build process, and not an optional, good to do alternative. Second thing, you must review and write custom rules, so that it won't take too long to execute. Given build process need to do too many things these days e.g. clean, compile, package, static analysis, unit testing and deployment, even small time added in each step, eventually increases total build time.
+* **False Positives**: 
+When your tools alert you with false positives, you start taking them lightly and then it becomes habit to treat everything as a false positive, which eventually takes away all benefits of static code analysis. A good software developer needs to be disciplined enough to not fall into that trap.
+
+
 
 ## Other Static Analysis Tools
 
 We looked at other Static Analysis tools; some of them, like Checkmarx and Veracode were too security-focused and had limited options in terms of language support and DevOps integration. Standalone code analyzers like PMD, CheckStyle and FixBugs did not feature an extensive analysis insights and DevOps support. Coverity came close to SonarQube with respect to language support and DevOps integration but it was soon evident that SonarQube had superior user experience, post-analysis reports and documentation. Codacy also offered a similar feature set, and seemed like a scaled-down version of SonarQube; it did not feature a standalone scanner component. CodeClimate, which is more popular than SonarQube, has a smaller learning curve and simpler integration with external services, but it's quality gate and rule-set were less granular than SonarQube. CodeFactor also had similar limitations, but it had an interesting feature - code performance review.
 
-In conclusion, SonarQube is vastly flexible as compared to its rivals; its cloud interface, SonarCloud makes it easier to get things up and running, whereas the standalone Scanner and Server components meets more complex requirements. Moreover, SonarQube's rich analysis insights and granular configuration should appeal to advanced users. 
-
-CSC510 Project Link: ?
+In conclusion, SonarQube is vastly flexible as compared to its rivals; its cloud interface, SonarCloud makes it easier to get things up and running, whereas the standalone Scanner and Server components meets more complex requirements. Moreover, SonarQube's rich analysis insights and granular configuration should appeal to advanced users.
